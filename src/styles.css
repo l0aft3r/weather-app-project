@@ -1,0 +1,115 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+  I have slightly modified the CSS reset, go to the link above for the original one.
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+input {
+    display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+
+/* End of css reset */
+
+@font-face {
+    font-family: 'roboto';
+    src: url('./fonts/Roboto-Regular.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root {
+    --dark-blue: #87A2FF;
+    --blue: #C4D7FF;
+    --pink: #FFD7C4;
+    --yellow: #FFF4B5;
+    --white: #ffffff;
+}
+
+body {
+    font-family: roboto;
+    color: var(--white);
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: center;
+
+}
+
+header {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+form {
+    width: 100%;
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+button, input {
+    color: black;
+}
+
+.whiteSVG {
+    filter: invert(99%) sepia(0%) saturate(4%) hue-rotate(131deg) brightness(102%) contrast(102%);
+}
+
+#mainContainer {
+    background-color: #87A2FF;
+    height: 100%;
+    width: 60%;
+    padding: 1rem;
+}
+
+#info {
+    font-size: 3rem;
+    margin-left: 1rem;
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #mainContainer {
+      width: 100%;
+    }
+  }
+
+img {
+    width: 3rem;
+}
